@@ -3,7 +3,5 @@ import Home from './pages/index.vue';
 </script>
 
 <template>
-  <div>
-    <Home />
-  </div>
+  <NuxtPage />
 </template>
