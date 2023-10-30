@@ -1,7 +1,5 @@
-<script setup>
-import Home from './pages/index.vue';
-</script>
-
 <template>
+  <Header />
   <NuxtPage />
+  <Footer />
 </template>
