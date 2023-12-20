@@ -126,6 +126,16 @@ getBlogData();
     </div>
     <div ref="homeBlock" class="home__block">
       <div class="home__container">
+        <div id="works" class="home__block__layout" data-aos="zoom-in" data-aos-duration="800">
+          <div class="home__worksLabel">
+            <TitleButton title="Works" />
+            <ul v-if="false" class="home__worksLabel__menu">
+              <li class="home__worksLabel__menu__item">專案</li>
+              <li class="home__worksLabel__menu__item">小作品</li>
+            </ul>
+          </div>
+          <WorkList :list="tm('worksData')" />
+        </div>
         <div id="blog" class="home__block__layout" data-aos="fade-up" data-aos-duration="800">
           <TitleButton title="Blog" />
           <BlogCardList :list="blogData" class="home__blog" />
@@ -230,6 +240,33 @@ getBlogData();
           flex-direction: row;
           justify-content: space-between;
           gap: 72px;
+        }
+      }
+    }
+
+    &__worksLabel {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      @include desktop-up() {
+        display: block;
+      }
+
+      &__menu {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        @include desktop-up() {
+          flex-direction: column;
+          align-items: start;
+          margin-left: 24px;
+          margin-top: 72px;
+        }
+
+        &__item {
+          cursor: pointer;
         }
       }
     }
