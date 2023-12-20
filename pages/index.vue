@@ -8,11 +8,14 @@ import 'aos/dist/aos.css';
 import messages from '@/public/langData.json';
 
 const home: globalThis.Ref<HTMLDivElement | null> = ref(null);
+const backgroundOne = ref(null);
+const backgroundTwo = ref(null);
 const avatar = ref(null);
 const avatarImg = ref(null);
 const introList = ref(null);
 const homeBlock = ref(null);
 const showBlock = ref(false);
+const hideBackground = ref(false);
 
 const scrollIcon = ref(null);
 const circle = ref(0);
@@ -43,9 +46,18 @@ onMounted(() => {
     scrollIcon.value.style.transform = `rotate(${circle.value}deg)`;
 
     showBlock.value = getShowBlock();
+    hideBackground.value = getHideBackground();
     const headerBackground = document.querySelector('.header__background');
     
     if (isDesktopUp.value) {
+      if (!isSafari()) {
+        const scrollPercentage = window.scrollY / introList.value.offsetHeight;
+        const topValue = -72 + (144 * Math.min(scrollPercentage, 1));
+        const BottomValue = -144 + (144 * Math.min(scrollPercentage, 1));
+        backgroundOne.value.style.top = `${topValue}px`;
+        backgroundTwo.value.style.bottom = `${BottomValue}px`;
+      }
+
       if (!showBlock.value) {
         home.value ? home.value.style.backgroundColor = '#F4F4F4' : null;
         headerBackground.style.backgroundColor = 'transparent';
@@ -54,6 +66,26 @@ onMounted(() => {
         home.value ? home.value.style.backgroundColor = 'transparent' : null;
         headerBackground.style.backgroundColor = '#ffffff';
         homeBlock.value.style.backgroundColor = '#111111';
+      }
+
+      if (!hideBackground.value) {
+        avatar.value.style.display = 'none';
+        backgroundOne.value.style.display = 'none';
+        backgroundTwo.value.style.display = 'none';
+      } else {
+        avatar.value.style.display = 'block';
+        backgroundOne.value.style.display = 'block';
+        backgroundTwo.value.style.display = 'block';
+      }
+    } else {
+      if (introList.value.getBoundingClientRect().bottom >= 300) {
+        homeBlock.value.style.backgroundColor = '#111111';
+        backgroundOne.value.style.display = 'block';
+        backgroundTwo.value.style.display = 'block';
+      } else {
+        homeBlock.value.style.backgroundColor = '#F4F4F4';
+        backgroundOne.value.style.display = 'none';
+        backgroundTwo.value.style.display = 'none';
       }
     }
   })
@@ -65,6 +97,15 @@ const { tm, locale } = useI18n({
 
 function getShowBlock() {
   return avatarImg.value.getBoundingClientRect().bottom - 350 <= introList.value.getBoundingClientRect().bottom;
+}
+
+function getHideBackground() {
+  return avatarImg.value.getBoundingClientRect().bottom - 1000 <= introList.value.getBoundingClientRect().bottom;
+}
+
+function isSafari() {
+  const ua = navigator.userAgent.toLocaleLowerCase();
+  return (ua.indexOf('safari') != -1) ? (ua.indexOf('chrome') == -1) : false;
 }
 
 interface BlogItem {
@@ -89,6 +130,7 @@ getBlogData();
 
 <template>
   <div ref="home" class="home">
+    <div class="home__header" />
     <div class="home__intro">
       <div ref="avatar" class="home__intro__avatar">
         <div ref="avatarImg" class="home__intro__avatar__img">
@@ -152,11 +194,26 @@ getBlogData();
         </div>
       </div>
     </div>
+    <!-- Background 1 -->
+    <img ref="backgroundOne" class="background-1" src="/backgroundOne.svg" alt="">
+    <!-- Background 2 -->
+    <img ref="backgroundTwo" class="background-2" src="/backgroundTwo.svg" alt="">
   </div>
 </template>
 
 <style lang="scss" scoped>
   .home {
+    transition: background-color .3s;
+
+    &__header {
+      width: 100%;
+      height: 80px;
+      background-color: #ffffff;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
     &__container {
       width: 90%;
       margin: auto;
@@ -281,6 +338,41 @@ getBlogData();
       @include desktop-up() {
         margin-bottom: 100px;
       }
+    }
+  }
+  .background-1 {
+    position: fixed;
+    opacity: .6 !important;
+    transition: opacity .3s ease;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 333px;
+    height: 555px;
+
+    @include desktop-up() {
+      top: -72px;
+      left: -200px;
+      width: 777px;
+      height: 999px;
+    }
+    
+  }
+
+  .background-2 {
+    position: fixed;
+    opacity: 0.5;
+    transition: opacity .3s ease;
+    z-index: -1;
+    bottom: -72px;
+    right: 0;
+    width: 333px;
+    height: 555px;
+
+    @include desktop-up() {
+      bottom: -144px;
+      width: 777px;
+      height: 999px;
     }
   }
 </style>
