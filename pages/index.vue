@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { useHead } from '#imports';
 import { useFetch } from '#app';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -18,6 +19,11 @@ const circle = ref(0);
 const lastPageYOffset = ref(0);
 
 const isDesktopUp = ref(false);
+
+useHead({
+  title: 'Gui Site',
+});
+
 onMounted(() => {
   AOS.init();
 
