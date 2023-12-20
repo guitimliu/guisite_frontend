@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import messages from '@/public/langData.json';
+
+const { tm, locale } = useI18n({
+  messages,
+});
+</script>
+
 <template>
   <div class="home">
     <p class="home__content">Hello World!</p>
