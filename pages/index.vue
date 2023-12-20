@@ -130,6 +130,10 @@ getBlogData();
           <TitleButton title="Blog" />
           <BlogCardList :list="blogData" class="home__blog" />
         </div>
+        <div id="tools" class="home__block__layout" data-aos="fade-up" data-aos-duration="800">
+          <TitleButton title="Tools" />
+          <ToolCardList :list="tm('toolsData')" />
+        </div>
       </div>
     </div>
   </div>
