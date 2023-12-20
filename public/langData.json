@@ -1,0 +1,202 @@
+ {
+  "zh-hant": {
+    "name": "劉桂廷 Gui",
+    "jobTitleList": [
+      {
+        "companyName": "版塊設計 Block Studio",
+        "jobTitleName": "前端工程師",
+        "time": "2022.2 - 2023.8"
+      },
+      {
+        "companyName": "環球睿視股份有限公司",
+        "jobTitleName": "資訊助理人員（實習）",
+        "time": "2020.7 - 2021.3"
+      },
+      {
+        "companyName": "致理科技大學",
+        "jobTitleName": "資訊管理系",
+        "time": "2017.8 - 2021.7"
+      }
+    ],
+    "listCard": [
+      {
+        "title": "前端技能",
+        "list": [
+          "使用 SCSS 手刻手機優先 RWD / AWD 版面。",
+          "Uno.css / Tailwind CSS / Bootstrap CSS 框架開發經驗。",
+          "Vite、Nuxt 以及搭配基礎 TypeScript 開發經驗。",
+          "使用 asyncData 搭配 axios 與 Nuxt 3 useFetch 的 API 串接經驗。",
+          "各項套件使用經驗：Swiper、i18n、AOS、... 等。"
+        ]
+      },
+      {
+        "title": "後端技能",
+        "list": [
+          "使用 WordPress 搭配 PHP 客製化開發產品與接案。",
+          "利用 WordPress 開設 API 規格以利前端進行串接使用。",
+          "MySQL 基本 CRUD 邏輯撰寫與運用。"
+        ]
+      },
+      {
+        "title": "其他技能",
+        "list": [
+          "基本 Linux 操作與 Shell + Cron Job 腳本運用經驗。",
+          "使用 PM2 監聽 SSR 專案後運用 Nginx / Apache 進行反向代理。",
+          "無障礙網站開發與調整經驗，幫助專案取得無障礙認證標章。",
+          "使用 Hexo 架設技術部落格撰寫技術筆記與學習紀錄。",
+          "運用 Chat GPT 產生 Node.js 腳本生成 Hexo API 供本站 Blog 區塊串接。"
+        ]
+      }
+    ],
+    "worksData": [
+      {
+        "name": "Gui Site（SCSS + Nuxt 3）",
+        "image": "/guiSite.png",
+        "url": "https://guiliu.site/"
+      },
+      {
+        "name": "WowCho 募資平台（部分頁面切版 / Uno.css）",
+        "image": "/wowcho.jpg",
+        "url": "https://wowcho.site/"
+      },
+      {
+        "name": "台東藝文平台（後端開發）",
+        "image": "/cultureTaitung.jpg",
+        "url": "https://www.behance.net/gallery/163459081/_"
+      },
+      {
+        "name": "慢食臺東（後端開發）",
+        "image": "/slowfoodtaitung.jpg",
+        "url": "https://www.behance.net/gallery/174945453/_"
+      },
+      {
+        "name": "安妮新聞（後端開發）",
+        "image": "/annetimes.jpg",
+        "url": "https://www.behance.net/gallery/168023189/_"
+      },
+      {
+        "name": "新埔市場高冷蔬菜（WordPress 開發）",
+        "image": "/vegetableSite.png",
+        "url": "https://vegetable.tw/"
+      },
+      {
+        "name": "訂單查詢系統（Bootstrap 5 + PHP）",
+        "image": "/nicestoreOrderList.jpeg",
+        "url": "#"
+      },
+      {
+        "name": "訂單查詢系統（CSS + PHP）",
+        "image": "/housefoodPayment.png",
+        "url": "#"
+      }
+    ],
+    "toolsData": [
+      {
+        "title": "30 天打造技術部落格",
+        "index": 0,
+        "desc": "想要打造技術部落格？試試 Hexo 吧！這裡有完整教學內容。",
+        "url": "https://ithelp.ithome.com.tw/users/20139218/ironman/3910"
+      }
+    ]
+  },
+  "en": {
+    "name": "Gui Ting Liu",
+    "jobTitleList": [
+      {
+        "companyName": "Block Studio",
+        "jobTitleName": "Front-End Developer",
+        "time": "2022.2 - 2023.8"
+      },
+      {
+        "companyName": "Global Vision Ubestream Inc.",
+        "jobTitleName": "Information Assistant (Intern)",
+        "time": "2020.7 - 2021.3"
+      },
+      {
+        "companyName": "Chihlee University of Technology",
+        "jobTitleName": "Department Of Information Managerment",
+        "time": "2017.8 - 2021.7"
+      }
+    ],
+    "listCard": [
+      {
+        "title": "Front-end Skills",
+        "list": [
+          "Handcrafted mobile-first RWD/AWD layouts using SCSS.",
+          "Experience with Uno.css / Tailwind CSS / Bootstrap CSS frameworks.",
+          "Experience in development with Vite, Nuxt, and basic TypeScript.",
+          "Experience in API integration using asyncData with axios and Nuxt 3 useFetch.",
+          "Experience with various packages: Swiper, i18n, AOS, etc."
+        ]
+      },
+      {
+        "title": "Back-end Skills",
+        "list": [
+          "Customized product development and project handling using WordPress with PHP.",
+          "Establishing API specifications with WordPress for frontend integration.",
+          "Basic CRUD logic writing and application with MySQL."
+        ]
+      },
+      {
+        "title": "Other Skills",
+        "list": [
+          "Basic Linux operations and experience with Shell + Cron Job scripting.",
+          "Using PM2 for monitoring SSR projects and implementing reverse proxy with Nginx / Apache.",
+          "Experience in developing and adjusting accessible websites, aiding in obtaining accessibility certification badges.",
+          "Using Hexo to set up a technical blog for writing technical notes and learning records.",
+          "Utilizing Chat GPT to generate Node.js scripts for creating Hexo APIs for integration with our site's Blog section."
+        ]
+      }
+    ],
+    "worksData": [
+      {
+        "name": "Gui Site（SCSS + Nuxt 3）",
+        "image": "/guiSite.png",
+        "url": "https://guiliu.site/"
+      },
+      {
+        "name": "WowCho Crowdfunding Platform（Partial Page Layout / Uno.css）",
+        "image": "/wowcho.jpg",
+        "url": "https://wowcho.site/"
+      },
+      {
+        "name": "Taitung Arts and Culture Platform（Back-end Development）",
+        "image": "/cultureTaitung.jpg",
+        "url": "https://www.behance.net/gallery/163459081/_"
+      },
+      {
+        "name": "Slow Food Taitung（Back-end Development）",
+        "image": "/slowfoodtaitung.jpg",
+        "url": "https://www.behance.net/gallery/174945453/_"
+      },
+      {
+        "name": "The Anne Times（Back-end Development）",
+        "image": "/annetimes.jpg",
+        "url": "https://www.behance.net/gallery/168023189/_"
+      },
+      {
+        "name": "Xinpu Market High-Altitude Vegetables（WordPress Development）",
+        "image": "/vegetableSite.png",
+        "url": "https://vegetable.tw/"
+      },
+      {
+        "name": "Order Inquiry System（Bootstrap 5 + PHP）",
+        "image": "/nicestoreOrderList.jpeg",
+        "url": "#"
+      },
+      {
+        "name": "Order Inquiry System（CSS + PHP）",
+        "image": "/housefoodPayment.png",
+        "url": "#"
+      }
+    ],
+    "toolsData": [
+      {
+        "title": "Build a Tech Blog in 30 Days (Chinese)",
+        "index": 0,
+        "desc": "Want to build a tech blog? Try Hexo! Here's a complete tutorial.",
+        "url": "https://ithelp.ithome.com.tw/users/20139218/ironman/3910"
+      }
+    ]
+  }
+}
