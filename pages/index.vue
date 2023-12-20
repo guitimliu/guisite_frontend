@@ -112,6 +112,16 @@ getBlogData();
         </div>
       </div>
       <div ref="introList" class="home__intro__list">
+        <JobTitleCard
+          :name="tm('name')"
+          :list="tm('jobTitleList')"
+        />
+        <listCard
+          v-for="item in tm('listCard')"
+          :key="item.title"
+          :title="item.title"
+          :list="item.list"
+        />
       </div>
     </div>
     <div ref="homeBlock" class="home__block">
