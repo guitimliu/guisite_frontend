@@ -1,0 +1,107 @@
+@mixin line-height-title {
+  line-height: 1.2;
+}
+
+@mixin line-height-base {
+  line-height: 1.5;
+}
+
+// font weight
+
+@mixin font-weight-base {
+  font-weight: 400;
+}
+
+@mixin font-weight-lg {
+  font-weight: 500;
+}
+
+// letter spacing
+
+@mixin letter-spacing-base {
+  letter-spacing: 3%
+}
+
+// title
+
+@mixin font-h1 {
+  @include line-height-title;
+  @include font-weight-lg;
+  font-size: 40px;
+  letter-spacing: 5%;
+}
+
+@mixin font-h2 {
+  @include line-height-title;
+  @include font-weight-lg;
+  @include letter-spacing-base;
+  font-size: 32px;
+}
+
+@mixin font-h3 {
+  @include line-height-title;
+  @include font-weight-lg;
+  @include letter-spacing-base;
+  font-size: 28px;
+}
+
+@mixin font-h4 {
+  @include line-height-title;
+  @include font-weight-base;
+  @include letter-spacing-base;
+  font-size: 24px;
+}
+
+@mixin font-h5 {
+  @include line-height-title;
+  @include font-weight-base;
+  @include letter-spacing-base;
+  font-size: 20px;
+}
+
+@mixin font-h6 {
+  @include line-height-title;
+  @include font-weight-base;
+  @include letter-spacing-base;
+  font-size: 16px;
+}
+
+// text
+
+@mixin font-lg {
+  @include line-height-base;
+  @include font-weight-base;
+  @include letter-spacing-base;
+
+  font-size: 20px;
+}
+
+@mixin font-base {
+  @include line-height-base;
+  @include font-weight-base;
+  @include letter-spacing-base;
+
+  font-size: 16px;
+}
+
+@mixin font-sm {
+  @include line-height-base;
+  @include font-weight-base;
+  @include letter-spacing-base;
+
+  font-size: 14px;
+}
+
+// device
+
+@mixin tablet-up() {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop-up() {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
