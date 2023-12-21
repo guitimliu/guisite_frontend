@@ -31,11 +31,15 @@ function scrollTo(url) {
   const block = document.querySelector(`#${url}`);
   block?.scrollIntoView({ behavior: 'smooth' });
 }
+
+function backToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 </script>
 
 <template>
   <div class="header">
-    <a href="/" class="header__title">Gui Site</a>
+    <h1 @click="backToTop" class="header__title">Gui Site</h1>
     <button @click="showBreadMenu = true;" type="button" class="header__breadMenu">
       <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0.25 0.5H25.75V3.35547H0.25V0.5ZM0.25 10.3945V7.60547H25.75V10.3945H0.25ZM0.25 17.5V14.6445H25.75V17.5H0.25Z" fill="#111111"/>
@@ -78,6 +82,7 @@ function scrollTo(url) {
     color: #000;
     text-decoration: none;
     transition: letter-spacing .3s;
+    cursor: pointer;
     
     &:hover {
       letter-spacing: 2px;

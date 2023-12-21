@@ -70,7 +70,7 @@ const copyright:string = '© 2023 Gui. All rights reserved.';
 <template>
   <div class="footer">
     <div class="footer__top">
-      <a href="/" class="footer__title">{{ title }}</a>
+      <h2 @click="backToTop" class="footer__title">{{ title }}</h2>
       <!-- <p class="footer__peopleNum">
         <span class="footer__peopleNum__count">
           {{ peopleNum }}
@@ -123,6 +123,7 @@ const copyright:string = '© 2023 Gui. All rights reserved.';
     text-decoration: none;
     transition: letter-spacing .3s;
     margin-bottom: 16px;
+    cursor: pointer;
     
     &:hover {
       letter-spacing: 2px;
