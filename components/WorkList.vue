@@ -22,7 +22,7 @@ defineProps({
           <img class="workList__image" :src="item.image" :alt="item.name">
         </div>
         <h3 class="workList__name">{{ item.name }}</h3>
-        <a :href="item.url" class="workList__url" :title="item.name" target="_blank">item.name</a>
+        <a v-if="item.url" :href="item.url" class="workList__url" :title="item.name" target="_blank">item.name</a>
       </div>
     </swiper-slide>
   </swiper>
