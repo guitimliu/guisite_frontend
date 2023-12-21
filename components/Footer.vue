@@ -23,6 +23,15 @@ const langMenu:LangItem[] = [
   },
 ]
 
+function changeLang(langSlug) {
+  locale.value = langSlug;
+  backToTop();
+}
+
+function backToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 interface MenuItem {
   name: string;
   url: string;
@@ -70,7 +79,7 @@ const copyright:string = '© 2023 Gui. All rights reserved.';
       </p> -->
       <ul class="footer__langList">
         <li v-for="item in langMenu" :key="item.name">
-          <button class="footer__langList__item" type="button" @click="$i18n.locale = item.slug">{{ item.name }}</button>
+          <button class="footer__langList__item" :class="{'active': $i18n.locale === item.slug}" type="button" @click="changeLang(item.slug)">{{ item.name }}</button>
         </li>
       </ul>
     </div>
@@ -162,6 +171,10 @@ const copyright:string = '© 2023 Gui. All rights reserved.';
       cursor: pointer;
       padding: 2px;
       transition: color .3s;
+
+      &.active {
+        font-weight: bold;
+      }
 
       &:after {
         content: '';
