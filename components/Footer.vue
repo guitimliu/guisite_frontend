@@ -126,7 +126,7 @@ const copyright:string = '© 2023 Gui. All rights reserved.';
     cursor: pointer;
     
     &:hover {
-      letter-spacing: 2px;
+      letter-spacing: 5px;
     }
 
     @include desktop-up() {

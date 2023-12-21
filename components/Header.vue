@@ -85,7 +85,7 @@ function backToTop() {
     cursor: pointer;
     
     &:hover {
-      letter-spacing: 2px;
+      letter-spacing: 5px;
     }
   }
 
