@@ -152,7 +152,7 @@ function scrollTo(url) {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 48px;
+    gap: 24px;
     border-top: 2px solid #fff;
     padding: 20px 2%;
 
