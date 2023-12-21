@@ -57,7 +57,9 @@ function backToTop() {
     </ul>
     <div class="header__background" />
   </div>
-  <BreadMenu @closeBreadMenu="closeBreadMenu" v-show="showBreadMenu" />
+  <transition name="breadMenu">
+    <BreadMenu @closeBreadMenu="closeBreadMenu" v-show="showBreadMenu" />
+  </transition>
 </template>
 
 <style lang="scss" scoped>
@@ -152,5 +154,15 @@ function backToTop() {
     background-color: #ffffff;
     opacity: 0.8;
   }
+}
+
+.breadMenu-enter-active, .breadMenu-leave-active {
+  transition: opacity .3s;
+}
+.breadMenu-enter-from, .breadMenu-leave-to {
+  opacity: 0;
+}
+.breadMenu-enter-to, .breadMenu-leave-from {
+  opacity: 1;
 }
 </style>
