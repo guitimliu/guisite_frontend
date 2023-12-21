@@ -59,7 +59,7 @@ const FooterMenu:MenuItem[] = [
     url: 'https://www.cakeresume.com/s--sI2HcyKiJPFCPtv8Zrk9mw--/guitimliu',
   },
   {
-    name: 'Linktr',
+    name: 'Linktree',
     url: 'https://linktr.ee/guitimliu',
   },
 ]
