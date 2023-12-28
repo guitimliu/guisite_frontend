@@ -72,6 +72,7 @@ function backToTop() {
   justify-content: space-between;
   align-items: center;
   width: 90%;
+  max-width: 1440px;
   border-bottom: 2px solid #000;
   background-color: transparent;
   padding: 16px 0;
