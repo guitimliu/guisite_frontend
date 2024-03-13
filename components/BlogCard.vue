@@ -5,22 +5,11 @@ defineProps({
     default: {},
   }
 })
-
-const isSafari = ref(false);
-
-onMounted(() => {
-  isSafari.value = getIsSafari();
-})
-
-function getIsSafari() {
-  const ua = navigator.userAgent.toLocaleLowerCase();
-  return (ua.indexOf('safari') != -1) ? (ua.indexOf('chrome') == -1) : false;
-}
 </script>
 
 <template>
   <div class="blogCard">
-    <img v-if="!isSafari" class="blogCard__image" :src="data.image" :alt="data.title">
+    <img class="blogCard__image" :src="data.image" :alt="data.title">
     <h2 class="blogCard__title">{{ data.title }}</h2>
     <p class="blogCard__desc">{{ data.desc }}</p>
     <a class="blogCard__url" :href="data.url" :title="data.title" target="_blank">{{ data.title }}</a>
