@@ -64,7 +64,9 @@ const FooterMenu:MenuItem[] = [
   },
 ]
 
-const copyright:string = '© 2023 Gui. All rights reserved.';
+const startYear:number = 2023;
+const endYear:number = new Date().getFullYear();
+const copyright:string = `© ${startYear} - ${endYear} Gui. All rights reserved.`;
 </script>
 
 <template>
